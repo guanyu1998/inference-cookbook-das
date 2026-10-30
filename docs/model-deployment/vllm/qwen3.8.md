@@ -54,6 +54,8 @@ vllm serve hygon/Qwen3.8-Flash-Next-Channel-FP8 \
   --kv-cache-dtype fp8_e4m3 \
   --enable-prefix-caching \
   --mamba-cache-mode align \
+  --prefix-match-unit 64 \
+  --enable-mamba-fine-grained-prefix-cache \
   --speculative-config '{"method":"mtp","num_speculative_tokens":3}' \
   --enable-auto-tool-choice \
   --tool-call-parser qwen3_coder \
@@ -101,7 +103,6 @@ vllm serve hygon/Qwen3.8-Flash-Next-Channel-INT8-w8a8 \
   --trust-remote-code \
   --enable-prefix-caching \
   --mamba-cache-mode align \
-  --prefix-match-unit 64 \
   --enable-mamba-fine-grained-prefix-cache \
   --engram-config.cpu_offload=true \
   --speculative-config.method mtp \
