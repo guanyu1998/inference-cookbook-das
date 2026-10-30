@@ -78,7 +78,6 @@ vllm serve hygon/Qwen3.8-Flash-Next-Channel-FP8 \
   --attention-backend FLASH_ATTN \
   --moe-backend aiter \
   --kv-cache-dtype fp8_e4m3 \
-  --engram-config.cpu_offload=true \
   --enable-prefix-caching \
   --mamba-cache-mode align \
   --prefix-match-unit 64 \
